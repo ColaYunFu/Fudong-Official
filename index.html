@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#183943">
+<meta name="description" content="符冬便利店线上门店。语音频道、社群入口与店内公告。">
+<title>符冬便利店 · 线上门店</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23183943'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' text-anchor='middle' fill='%238bcdb3'%3EFD%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--navy:#183943;--navy2:#244e55;--mint:#8bcdb3;--mintpale:#e8f6ee;--cream:#f7f5ee;--paper:#fffefa;--ink:#20323a;--muted:#718187;--line:#e2e9e4;--peach:#f4c49a;--rose:#eaa8b6;--blue:#a8c9dd;--lav:#b9b1df;--shadow:0 20px 60px rgba(24,57,67,.10);--round:26px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 48px));margin:0 auto}.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-mark{height:46px;width:46px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(140deg,#b7e2c8,#f4d4bb);color:#20434a;font-size:20px;font-weight:950;letter-spacing:-1.2px;box-shadow:0 8px 20px rgba(0,0,0,.10);transform:rotate(-3deg);flex:none}.brand-title{font-size:16px;font-weight:900;letter-spacing:.04em}.brand-sub{font-size:9px;letter-spacing:.18em;color:#758b8e;margin-top:2px}.topnav{display:flex;align-items:center;gap:28px;color:#556b70;font-size:12px;font-weight:750}.topnav a{transition:color .2s}.topnav a:hover{color:#32745f}.nav-cta{border:0;background:var(--navy);color:#fff!important;padding:10px 16px;border-radius:999px}.hero{position:relative;overflow:hidden;min-height:440px;background:var(--navy);border-radius:32px;color:#fff;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;padding:56px clamp(28px,5vw,66px);isolation:isolate;box-shadow:var(--shadow)}.hero:before,.hero:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.10);border-radius:50%;pointer-events:none}.hero:before{width:500px;height:500px;right:-115px;top:-170px;box-shadow:0 0 0 30px rgba(255,255,255,.018),0 0 0 75px rgba(255,255,255,.018)}.hero:after{width:240px;height:240px;left:39%;bottom:-180px;background:rgba(139,205,179,.06)}.eyebrow{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.19em;font-weight:850;color:#a5d9c7;text-transform:uppercase}.live-dot{width:7px;height:7px;border-radius:50%;background:#91dfae;box-shadow:0 0 0 5px rgba(145,223,174,.12)}h1{font-size:clamp(36px,5.3vw,62px);line-height:1.16;letter-spacing:-.045em;margin:19px 0 18px;font-weight:950}.hero h1 em{font-style:normal;color:var(--mint)}.hero-copy{max-width:510px}.hero-desc{font-size:14px;color:#c7d8d6;max-width:430px;line-height:2;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.button{display:inline-flex;justify-content:center;align-items:center;gap:8px;border-radius:999px;padding:12px 18px;font-size:12px;font-weight:850;transition:transform .18s,background .18s}.button:hover{transform:translateY(-2px)}.button-light{background:var(--mint);color:#183943}.button-ghost{border:1px solid rgba(255,255,255,.2);color:#eff6f1;background:rgba(255,255,255,.04)}.hero-note{font-size:10px;color:#9db9b8;margin-top:16px}.clock-card{justify-self:end;width:min(100%,310px);background:linear-gradient(155deg,rgba(255,255,255,.13),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.18);border-radius:25px;padding:24px;box-shadow:0 24px 65px rgba(0,0,0,.12);backdrop-filter:blur(8px);transform:rotate(2deg)}.clock-top{display:flex;align-items:center;justify-content:space-between;font-size:9px;letter-spacing:.14em;color:#a8c3c0;font-weight:850}.clock-icon{width:29px;height:29px;border-radius:10px;display:grid;place-items:center;background:rgba(139,205,179,.16);color:var(--mint);font-size:15px}.clock-time{font-size:clamp(38px,5vw,54px);font-variant-numeric:tabular-nums;font-weight:850;letter-spacing:-.05em;line-height:1.25;margin-top:22px}.clock-date{color:#c3d4d2;font-size:11px;margin-top:3px}.clock-divider{height:1px;background:rgba(255,255,255,.13);margin:21px 0}.status-row{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#d9e6e1}.status-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(139,205,179,.13);color:#b4e6d2;padding:6px 9px;border-radius:99px;font-weight:800}.section{padding:72px 0 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.kicker{font-size:9px;color:#6b9f8d;font-weight:900;letter-spacing:.2em}.section h2{font-size:clamp(25px,3vw,34px);line-height:1.25;letter-spacing:-.035em;margin:7px 0 0;font-weight:950}.section-lead{max-width:440px;font-size:12px;color:var(--muted);margin:0;line-height:1.9}.platform-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.platform-card{display:flex;align-items:center;gap:15px;min-height:112px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:19px;box-shadow:0 7px 24px rgba(24,57,67,.035);transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;overflow:hidden}.platform-card:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(24,57,67,.09);border-color:#c8dbd0}.platform-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;flex:none;font-size:16px;font-weight:950;letter-spacing:-.05em;color:#fff}.dc{background:#5865f2}.oopz{background:#20282e;color:#9de5d0}.blackbox{background:#202226}.kook{background:#fed45c;color:#292b2e}.qq{background:#38a8f8}.bili{background:#f58db0;color:#402944;font-size:13px}.platform-info{min-width:0;flex:1}.platform-name{font-weight:900;font-size:14px}.platform-type{font-size:10px;color:#8a9999;margin-top:2px}.platform-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px}.platform-status{font-size:9px;color:#9a8a69;background:#faf2df;border:1px solid #f1e7cb;border-radius:99px;padding:3px 7px;font-weight:800}.arrow{font-size:17px;color:#8bbca8}.community-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.community-card{min-height:150px;padding:24px;border-radius:24px;display:flex;align-items:center;gap:18px;position:relative;overflow:hidden}.community-card:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(32,50,58,.07);border-radius:50%;right:-70px;bottom:-110px;box-shadow:0 0 0 20px rgba(32,50,58,.025)}.community-qq{background:#e8f4fa}.community-bili{background:#fcebf0}.community-icon{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;font-size:19px;font-weight:950;flex:none;box-shadow:0 8px 20px rgba(0,0,0,.07)}.community-qq .community-icon{background:#3ba9f8;color:white}.community-bili .community-icon{background:#f18fb0;color:#402944}.community-text{position:relative;z-index:1}.community-title{font-size:17px;font-weight:950}.community-copy{font-size:11px;color:#687e85;margin-top:4px}.community-bottom{display:flex;align-items:center;gap:8px;margin-top:13px;color:#466872;font-size:10px;font-weight:850}.announcement-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:18px;align-items:stretch}.notice-intro{background:#e7efe7;border:1px solid #dce8dd;border-radius:24px;padding:27px;display:flex;flex-direction:column;justify-content:space-between;min-height:230px}.notice-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#fffefa;color:#50886f;font-size:18px}.notice-intro h3{font-size:23px;line-height:1.3;margin:18px 0 7px;font-weight:950}.notice-intro p{font-size:11px;color:#637972;margin:0;line-height:1.9}.notice-foot{font-size:9px;letter-spacing:.12em;color:#739083;font-weight:850;margin-top:24px}.notice-board{border-radius:24px;background:var(--paper);border:1px solid var(--line);padding:12px 22px;display:flex;flex-direction:column;justify-content:center}.notice-row{display:flex;align-items:center;gap:15px;padding:19px 0;border-bottom:1px dashed #e4e9e4}.notice-row:last-child{border-bottom:0}.notice-date{min-width:47px;color:#7d9b8e;font-size:9px;font-weight:900;letter-spacing:.08em}.notice-main{flex:1}.notice-title{font-size:12px;font-weight:900;color:#344b50}.notice-desc{font-size:10px;color:#8a9999;margin-top:3px}.notice-tag{white-space:nowrap;background:#f6f1e7;border-radius:99px;padding:5px 8px;color:#938469;font-size:9px;font-weight:850}.about-strip{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;background:#fffefa;border:1px solid var(--line);border-radius:24px;padding:25px 28px;margin-top:18px}.about-strip h3{margin:0;font-size:16px;font-weight:950}.about-strip p{margin:5px 0 0;color:var(--muted);font-size:11px}.about-badge{display:flex;align-items:center;gap:8px;background:#eef6f0;color:#5b8975;border-radius:99px;padding:9px 12px;font-size:10px;font-weight:850;white-space:nowrap}.footer{padding:52px 0 24px}.footer-inner{border-top:1px solid #dde5de;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-copy{font-size:10px;color:#7d8e8d}.footer-brand{font-size:12px;font-weight:950;letter-spacing:.04em}.footer-links{display:flex;gap:16px;color:#728886;font-size:10px;font-weight:800}.footer-links a:hover{color:#32745f}.footnote{font-size:9px;color:#9aa6a2;margin-top:14px}.mobile-menu{display:none}
+@media(max-width:860px){.hero{grid-template-columns:1fr .8fr;padding:42px 34px;gap:20px}.topnav{gap:15px}.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.announcement-layout{grid-template-columns:.8fr 1.2fr}.clock-card{padding:20px}}
+@media(max-width:620px){.wrap{width:min(100% - 28px,480px)}.topbar{height:72px}.brand-mark{height:40px;width:40px;border-radius:13px;font-size:18px}.brand-title{font-size:14px}.brand-sub{font-size:8px}.topnav a:not(.nav-cta){display:none}.topnav{gap:0}.nav-cta{padding:9px 12px;font-size:10px}.hero{display:flex;flex-direction:column;align-items:stretch;padding:32px 23px 26px;min-height:0;border-radius:26px;gap:28px}.hero:before{right:-270px;top:-90px}.hero h1{font-size:42px;margin:16px 0 13px}.hero-desc{font-size:12px}.hero-actions{margin-top:21px}.button{padding:11px 15px}.clock-card{width:100%;justify-self:auto;transform:rotate(0);padding:18px 20px}.clock-time{font-size:44px;margin-top:12px}.clock-divider{margin:13px 0}.section{padding-top:52px}.section-heading{align-items:start;flex-direction:column;gap:9px;margin-bottom:17px}.section-lead{font-size:11px}.platform-grid{grid-template-columns:1fr;gap:10px}.platform-card{min-height:91px;padding:14px 16px;border-radius:17px}.platform-icon{width:48px;height:48px;border-radius:14px}.community-grid{grid-template-columns:1fr;gap:10px}.community-card{min-height:130px;padding:19px;border-radius:20px}.announcement-layout{grid-template-columns:1fr;gap:10px}.notice-intro{min-height:185px;padding:22px}.notice-board{padding:7px 16px}.notice-row{gap:9px;padding:16px 0}.notice-date{min-width:38px}.notice-title{font-size:11px}.notice-desc{font-size:9px}.notice-tag{font-size:8px;padding:4px 6px}.about-strip{grid-template-columns:1fr;padding:20px;margin-top:12px}.about-badge{width:max-content}.footer{padding-top:36px}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}.footer-links{flex-wrap:wrap}.footnote{line-height:1.8}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* V0.2 visual direction: provided store artwork as a full-page background + frosted-glass content */
+s content */
+:root{color-scheme:dark;--navy:#183943;--navy2:#244e55;--mint:#8bcdb3;--mintpale:rgba(139,205,179,.14);--cream:#0b1726;--paper:rgba(17,38,58,.56);--ink:#eff7fb;--muted:#b7c8d3;--line:rgba(208,231,246,.20);--peach:#f4c49a;--rose:#eaa8b6;--blue:#a8c9dd;--lav:#b9b1df;--shadow:0 24px 70px rgba(0,0,0,.28);--round:26px}
+body{min-height:100vh;background-color:#081522;background-image:none;color:var(--ink);position:relative;isolation:isolate}body::before{content:"";position:fixed;z-index:-1;inset:0;pointer-events:none;background-color:#081522;background-image:linear-gradient(180deg,rgba(5,14,27,.28) 0%,rgba(5,14,27,.34) 45%,rgba(5,14,27,.65) 100%),url('./assets/fudong-store-night-background.webp');background-size:cover;background-position:center top;background-repeat:no-repeat;background-attachment:fixed}
+.topbar{position:sticky;top:12px;z-index:30;margin-top:12px;height:72px;padding:0 20px;border:1px solid rgba(190,226,245,.22);border-radius:20px;background:rgba(10,29,49,.66);box-shadow:0 16px 46px rgba(0,0,0,.20);backdrop-filter:blur(20px) saturate(135%);-webkit-backdrop-filter:blur(20px) saturate(135%)}
+.brand-sub{color:#c1d4df}.topnav{color:#e0edf4}.topnav a:hover,.footer-links a:hover{color:#a6e8d2}.nav-cta{background:rgba(139,205,179,.92);color:#102d3a!important;box-shadow:0 5px 18px rgba(100,205,180,.17)}
+.hero{background:linear-gradient(120deg,rgba(12,32,53,.70),rgba(17,42,63,.36) 65%,rgba(30,49,64,.40));border:1px solid rgba(202,231,247,.24);box-shadow:0 26px 78px rgba(0,0,0,.30);backdrop-filter:blur(7px) saturate(115%);-webkit-backdrop-filter:blur(7px) saturate(115%)}
+.hero:before{border-color:rgba(220,242,255,.15);box-shadow:0 0 0 30px rgba(255,255,255,.025),0 0 0 75px rgba(255,255,255,.018)}
+.hero-desc{color:#e0ebf2;text-shadow:0 1px 10px rgba(0,0,0,.28)}.hero-note{color:#c4d6df}.clock-card{background:linear-gradient(145deg,rgba(18,43,65,.72),rgba(29,52,71,.40));border:1px solid rgba(208,233,249,.28);box-shadow:0 24px 65px rgba(0,0,0,.24);backdrop-filter:blur(22px) saturate(145%);-webkit-backdrop-filter:blur(22px) saturate(145%)}
+.section h2{color:#f2f8fc;text-shadow:0 2px 16px rgba(0,0,0,.28)}.kicker{color:#a6e4d1;text-shadow:0 1px 10px rgba(0,0,0,.3)}.section-lead{color:#d0dce5;text-shadow:0 1px 8px rgba(0,0,0,.34)}
+.platform-card,.notice-board,.about-strip{background:rgba(13,34,54,.61);border:1px solid rgba(198,227,244,.24);box-shadow:0 18px 45px rgba(0,0,0,.20);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%)}
+.platform-card{color:#eff7fb}.platform-card:hover{border-color:rgba(139,205,179,.66);box-shadow:0 20px 48px rgba(0,0,0,.25);background:rgba(21,48,70,.72)}.platform-type{color:#bfd0dc}.platform-status{color:#ffe0a5;background:rgba(162,117,45,.22);border:1px solid rgba(251,211,137,.24)}.arrow{color:#a8ead5}
+.community-card{border:1px solid rgba(202,231,247,.26);box-shadow:0 18px 44px rgba(0,0,0,.22);backdrop-filter:blur(20px) saturate(135%);-webkit-backdrop-filter:blur(20px) saturate(135%)}.community-qq{background:linear-gradient(125deg,rgba(30,94,137,.68),rgba(13,40,63,.64))}.community-bili{background:linear-gradient(125deg,rgba(123,57,91,.64),rgba(50,38,66,.63))}.community-qq .community-copy,.community-bili .community-copy{color:#d9e5ee}.community-bottom{color:#e2edf4}.community-qq .community-icon{box-shadow:0 10px 24px rgba(0,0,0,.20)}.community-bili .community-icon{box-shadow:0 10px 24px rgba(0,0,0,.20)}
+.notice-intro{background:linear-gradient(140deg,rgba(19,55,67,.76),rgba(16,38,58,.63));border:1px solid rgba(195,231,220,.23);box-shadow:0 18px 45px rgba(0,0,0,.20);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%)}.notice-intro h3{color:#f4f9fc}.notice-intro p{color:#d0e0e5}.notice-foot{color:#a8d7c5}.notice-icon{background:rgba(242,250,247,.13);color:#a5e1cb;border:1px solid rgba(204,241,226,.18)}.notice-row{border-bottom-color:rgba(210,233,245,.17)}.notice-title{color:#f0f7fb}.notice-desc{color:#c0d0dc}.notice-date{color:#a8dccc}.notice-tag{background:rgba(240,199,128,.16);color:#ffe1a5;border:1px solid rgba(240,199,128,.16)}
+.about-strip{color:#eff7fb}.about-strip h3{color:#f3f8fc}.about-strip p{color:#c9d8e1}.about-badge{background:rgba(139,205,179,.16);color:#b7f1d8;border:1px solid rgba(139,205,179,.22)}.footer-inner{border-top:1px solid rgba(203,229,243,.24)}.footer-copy,.footer-links{color:#d0dce5}.footnote{color:#b9c9d4}
+@media(max-width:620px){.topbar{top:6px;margin-top:6px;height:64px;padding:0 12px;border-radius:17px}.hero{backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.clock-card,.platform-card,.community-card,.notice-board,.notice-intro,.about-strip{backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px)}body::before{background-position:center top;background-attachment:scroll}}
+@media(prefers-reduced-transparency:reduce){.topbar,.hero,.clock-card,.platform-card,.community-card,.notice-board,.notice-intro,.about-strip{backdrop-filter:none;-webkit-backdrop-filter:none;background-color:rgba(8,23,38,.88)}}
+
+
+
+/* V0.3 focus panels: enlarge the chosen category and blur the rest of the storefront. */
+.focus-backdrop[hidden],.focus-close[hidden]{display:none!important}
+.focus-backdrop{position:fixed;inset:0;z-index:40;background:rgba(4,13,25,.10);backdrop-filter:blur(7px) brightness(.82) saturate(.96);-webkit-backdrop-filter:blur(7px) brightness(.82) saturate(.96);cursor:zoom-out;animation:focusFadeIn .22s ease both}
+body.focus-mode{overflow:hidden}
+body.focus-mode .topbar{z-index:80;background:rgba(8,26,45,.86);border-color:rgba(165,222,243,.34);box-shadow:0 12px 38px rgba(0,0,0,.28)}
+.topnav a{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border-radius:999px;border:1px solid transparent;transition:color .18s,background .18s,border-color .18s,box-shadow .18s}
+.topnav a.is-active{color:#c5fff0!important;background:rgba(113,218,218,.14);border-color:rgba(113,218,218,.48);box-shadow:0 0 22px rgba(89,206,223,.14)}
+.focus-close{position:fixed;z-index:90;top:110px;right:max(30px,calc((100vw - 1160px)/2 + 18px));display:flex;align-items:center;gap:8px;border:1px solid rgba(186,232,246,.35);border-radius:999px;padding:9px 14px;background:rgba(7,25,43,.86);color:#e9fbff;font-size:11px;font-weight:850;box-shadow:0 10px 30px rgba(0,0,0,.25);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);cursor:pointer;transition:transform .18s,background .18s}
+.focus-close:hover{transform:translateY(-1px);background:rgba(20,62,83,.94)}
+.focus-panel{position:fixed!important;z-index:60;left:50%;top:50%;bottom:auto;width:min(1160px,calc(100vw - 48px));height:min(720px,calc(100vh - 132px));min-height:min(560px,calc(100vh - 132px));max-height:calc(100vh - 132px);margin:0!important;transform:translate(-50%,-50%);overflow:auto;overscroll-behavior:contain;padding:58px clamp(20px,3.5vw,42px) 30px!important;border-radius:28px;border:1px solid rgba(183,229,246,.38);background:linear-gradient(135deg,rgba(9,29,49,.18),rgba(20,43,64,.07));box-shadow:0 28px 90px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.10);backdrop-filter:blur(14px) saturate(145%);-webkit-backdrop-filter:blur(14px) saturate(145%);animation:focusPanelIn .28s cubic-bezier(.2,.8,.2,1) both}
+.focus-panel.section{padding-top:58px!important;display:flex;flex-direction:column;justify-content:center}
+.focus-panel .section-heading{margin-bottom:22px;gap:24px}
+.focus-panel .section-heading h2{font-size:clamp(28px,3vw,42px)}
+.focus-panel .section-lead{max-width:390px;font-size:12px}
+.focus-panel .platform-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.focus-panel .platform-card{min-height:150px;align-items:flex-start;flex-direction:column;gap:12px;padding:20px}
+.focus-panel .platform-icon{width:58px;height:58px;border-radius:18px;font-size:17px}
+.focus-panel .platform-info{width:100%}
+.focus-panel .platform-footer{margin-top:13px}
+.focus-panel .community-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.focus-panel .community-card{min-height:210px;padding:28px;gap:22px}
+.focus-panel .community-icon{width:76px;height:76px;border-radius:23px;font-size:22px}
+.focus-panel .community-title{font-size:21px}
+.focus-panel .community-copy{font-size:12px}
+.focus-panel .announcement-layout{grid-template-columns:.72fr 1.28fr;gap:18px}
+.focus-panel .notice-intro{min-height:290px;padding:30px}
+.focus-panel .notice-intro h3{font-size:clamp(24px,2.5vw,34px)}
+.focus-panel .notice-intro p{font-size:12px}
+.focus-panel .notice-board{padding:12px 26px}
+.focus-panel .notice-row{gap:16px;padding:20px 0}
+.focus-panel .notice-title{font-size:14px}
+.focus-panel .notice-desc{font-size:11px}
+.focus-panel .notice-date{font-size:10px;min-width:58px}
+.focus-panel .notice-tag{font-size:10px}
+.focus-panel .about-strip{margin-top:18px;padding:22px 26px}
+.focus-panel.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(270px,.7fr);gap:35px;align-items:center;min-height:0;height:auto;padding:58px clamp(26px,5vw,68px) 36px!important;border-radius:28px}
+.focus-panel.hero h1{font-size:clamp(42px,5.2vw,68px)}
+.focus-panel.hero .clock-card{width:min(100%,360px);padding:28px;transform:rotate(1deg)}
+.focus-panel.hero .clock-time{font-size:clamp(42px,5vw,60px)}
+.focus-panel.hero .hero-desc{font-size:15px}
+.focus-panel.hero .hero-note{font-size:11px}
+@keyframes focusFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes focusPanelIn{from{opacity:0;transform:translate(-50%,-50%) scale(.975);filter:blur(5px)}to{opacity:1;transform:translate(-50%,-50%) scale(1);filter:blur(0)}}
+@media(max-width:860px){
+  .focus-panel{top:50%;bottom:auto;width:calc(100vw - 28px);height:min(740px,calc(100vh - 116px));min-height:min(520px,calc(100vh - 116px));max-height:calc(100vh - 116px);padding:54px 22px 24px!important;border-radius:24px}
+  .focus-close{top:101px;right:25px;padding:8px 12px}
+  .focus-panel .platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .focus-panel .platform-card{min-height:130px}
+  .focus-panel.hero{grid-template-columns:1fr .8fr;padding:52px 24px 26px!important;gap:22px}
+  .focus-panel .announcement-layout{grid-template-columns:1fr}
+  .focus-panel .notice-intro{min-height:180px}
+}
+@keyframes focusPanelInMobile{from{opacity:0;transform:translateX(-50%) scale(.975);filter:blur(5px)}to{opacity:1;transform:translateX(-50%) scale(1);filter:blur(0)}}
+@media(max-width:620px){
+  .topbar{gap:7px;padding:0 8px}
+  .brand{gap:7px}
+  .brand-mark{height:36px;width:36px;font-size:16px;border-radius:11px}
+  .brand-title{font-size:11px;letter-spacing:0}
+  .brand-sub{display:none!important}
+  .topnav{flex:1;min-width:0;max-width:58%;justify-content:flex-start;gap:1px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a:not(.nav-cta){display:inline-flex!important;padding:6px 6px;font-size:9px;flex:none}
+  .topnav .nav-cta{display:none!important}
+  .focus-panel{top:82px;bottom:10px;height:auto;min-height:0;max-height:none;width:calc(100vw - 16px);transform:translateX(-50%);padding:53px 14px 18px!important;border-radius:20px;animation:focusPanelInMobile .28s cubic-bezier(.2,.8,.2,1) both}
+  .focus-close{top:88px;right:20px;padding:7px 10px;font-size:10px}
+  .focus-panel .section-heading{gap:8px;margin-bottom:15px}
+  .focus-panel .section-heading h2{font-size:27px}
+  .focus-panel .section-lead{font-size:10px;line-height:1.7}
+  .focus-panel .platform-grid,.focus-panel .community-grid{grid-template-columns:1fr;gap:9px}
+  .focus-panel .platform-card{min-height:88px;flex-direction:row;align-items:center;padding:12px;gap:12px}
+  .focus-panel .platform-icon{width:46px;height:46px;border-radius:13px}
+  .focus-panel .platform-footer{margin-top:5px}
+  .focus-panel .community-card{min-height:116px;padding:16px;gap:15px}
+  .focus-panel .community-icon{width:56px;height:56px;border-radius:16px;font-size:18px}
+  .focus-panel .community-title{font-size:16px}
+  .focus-panel .community-copy{font-size:10px}
+  .focus-panel .notice-intro{min-height:145px;padding:18px}
+  .focus-panel .notice-intro h3{font-size:22px;margin-top:10px}
+  .focus-panel .notice-board{padding:5px 13px}
+  .focus-panel .notice-row{gap:7px;padding:13px 0}
+  .focus-panel .notice-date{min-width:34px;font-size:8px}
+  .focus-panel .notice-title{font-size:10px}
+  .focus-panel .notice-desc{font-size:9px;line-height:1.5}
+  .focus-panel .notice-tag{font-size:8px;padding:3px 5px}
+  .focus-panel .about-strip{grid-template-columns:1fr;padding:16px;margin-top:10px}
+  .focus-panel.hero{display:flex;flex-direction:column;align-items:stretch;gap:20px;padding:50px 20px 22px!important}
+  .focus-panel.hero h1{font-size:40px}
+  .focus-panel.hero .hero-desc{font-size:12px}
+  .focus-panel.hero .clock-card{width:100%;padding:16px;transform:none}
+  .focus-panel.hero .clock-time{font-size:40px;margin-top:8px}
+  .focus-panel.hero .clock-divider{margin:10px 0}
+}
+@media(prefers-reduced-motion:reduce){.focus-backdrop,.focus-panel{animation:none!important}}
+
+
+/* V0.4 About panel, icon navigation and a clean empty announcement state. */
+#about:not(.focus-panel){display:none}
+.topnav a{gap:7px}
+.nav-icon{width:15px;height:15px;display:inline-block;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px}
+.nav-icon-voice{width:16px;height:16px;stroke-width:2}
+.about-section{scroll-margin-top:100px}
+.about-content{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);align-items:stretch;gap:18px}
+.about-copy{border:1px solid rgba(195,231,244,.28);border-radius:24px;padding:24px 26px;background:linear-gradient(145deg,rgba(7,27,46,.70),rgba(16,40,59,.54));box-shadow:0 20px 52px rgba(0,0,0,.22);backdrop-filter:blur(22px) saturate(130%);-webkit-backdrop-filter:blur(22px) saturate(130%);color:#f1f8fc}
+.about-block{display:grid;grid-template-columns:38px minmax(0,1fr);gap:13px;padding:8px 0 20px;border-bottom:1px solid rgba(214,237,247,.16)}
+.about-block+.about-block{padding-top:20px}
+.about-index{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:rgba(116,218,230,.13);border:1px solid rgba(142,231,241,.28);color:#98eff2;font-size:11px;font-weight:900}
+.about-block h3{margin:1px 0 7px;color:#eafaff;font-size:17px;font-weight:900}
+.about-block p{margin:0;color:#d2e2eb;font-size:12px;line-height:2}
+.about-signoff{margin:18px 0 15px;font-size:14px;color:#d7f5f4;line-height:1.9}
+.about-signoff strong{display:block;color:#9ce6e9;font-size:20px;letter-spacing:.06em;margin-top:4px}
+.about-tip{padding:15px 16px;border-radius:16px;background:rgba(255,255,255,.065);border:1px solid rgba(202,233,245,.19)}
+.about-tip strong{font-size:11px;letter-spacing:.04em;color:#9de7d0}
+.about-tip p{margin:6px 0 0;font-size:11px;line-height:1.9;color:#c6dce6}
+.about-visual{position:relative;min-height:100%;overflow:hidden;border:1px solid rgba(195,231,244,.28);border-radius:24px;margin:0;box-shadow:0 20px 52px rgba(0,0,0,.24);background:rgba(8,25,43,.42)}
+.about-visual:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(180deg,transparent,rgba(5,17,31,.74));pointer-events:none}
+.about-visual img{display:block;width:100%;height:100%;min-height:480px;object-fit:cover;object-position:48% center;filter:saturate(.98)}
+.about-visual figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px;display:flex;align-items:center;gap:9px;color:#e3f8fc;font-size:10px;letter-spacing:.13em;font-weight:850}
+.announcement-empty{min-height:255px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 20px;border:1px solid rgba(195,231,244,.27);border-radius:24px;background:linear-gradient(145deg,rgba(8,28,48,.70),rgba(18,43,62,.52));box-shadow:0 20px 50px rgba(0,0,0,.20);backdrop-filter:blur(22px) saturate(130%);-webkit-backdrop-filter:blur(22px) saturate(130%);color:#eef9fc}
+.announcement-empty-icon{width:56px;height:56px;display:grid;place-items:center;border-radius:18px;background:rgba(115,220,229,.13);border:1px solid rgba(153,232,242,.23);margin-bottom:16px}
+.announcement-empty-icon svg{width:31px;height:31px;fill:none;stroke:#9debf2;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.announcement-empty h3{font-size:23px;margin:0;font-weight:900;letter-spacing:.02em}
+.announcement-empty p{font-size:12px;color:#c7dbe5;margin:7px 0 0;line-height:1.8}
+.focus-panel.about-section{justify-content:flex-start;overflow-y:auto}
+.focus-panel.about-section .section-heading{flex-shrink:0;margin-bottom:20px}
+.focus-panel.about-section .about-content{flex:1;min-height:0}
+.focus-panel.about-section .about-copy{overflow:auto}
+.focus-panel.about-section .about-visual img{min-height:100%;height:100%;max-height:530px}
+.focus-panel#announcements{justify-content:center}
+.focus-panel#announcements .section-heading{width:100%;flex-shrink:0}
+.focus-panel#announcements .announcement-empty{width:100%;min-height:330px}
+@media(max-width:860px){
+ .about-content{grid-template-columns:minmax(0,1fr) minmax(220px,.78fr);gap:12px}
+ .about-copy{padding:19px}
+ .about-visual img{min-height:450px}
+ .focus-panel.about-section .about-content{grid-template-columns:1fr .78fr}
+ .focus-panel.about-section .about-block p{font-size:11px;line-height:1.8}
+}
+@media(max-width:620px){
+ .topnav a{gap:2px;padding:6px 3px!important;font-size:8px!important}
+ .nav-icon{width:12px;height:12px}
+ .about-content{grid-template-columns:1fr}
+ .about-copy{padding:18px}
+ .about-visual{max-height:300px}
+ .about-visual img{min-height:260px;height:300px;object-position:50% 35%}
+ .about-block h3{font-size:15px}
+ .about-block p{font-size:11px}
+ .announcement-empty{min-height:210px}
+ .focus-panel.about-section .about-content{grid-template-columns:1fr}
+ .focus-panel.about-section .about-copy{overflow:visible}
+ .focus-panel.about-section .about-visual{max-height:250px}
+ .focus-panel.about-section .about-visual img{height:250px;min-height:250px;max-height:250px}
+ .focus-panel#announcements .announcement-empty{min-height:240px}
+}
+
+
+/* V0.6 QQ QR focus panel and keyboard-friendly card control. */
+#qqFocusPanel:not(.focus-panel){display:none}
+.qq-open-button{appearance:none;-webkit-appearance:none;width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer;border:1px solid rgba(202,231,247,.26)}
+.qq-open-button:focus-visible{outline:3px solid rgba(135,229,245,.72);outline-offset:4px}
+.qq-open-button .community-bottom{flex-wrap:wrap}
+.qq-focus-section{justify-content:center}
+.qq-focus-section .section-heading{width:100%;flex-shrink:0}
+.qq-focus-content{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);gap:clamp(20px,4vw,46px);align-items:center}
+.qq-focus-details{padding:clamp(22px,3vw,38px);border:1px solid rgba(195,231,244,.28);border-radius:24px;background:linear-gradient(145deg,rgba(7,27,46,.72),rgba(16,40,59,.56));box-shadow:0 20px 52px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(22px) saturate(130%);-webkit-backdrop-filter:blur(22px) saturate(130%);color:#f1f8fc}
+.qq-focus-tag{display:inline-flex;align-items:center;gap:9px;padding:7px 11px;border-radius:99px;background:rgba(116,218,230,.12);border:1px solid rgba(142,231,241,.22);color:#a9edf2;font-size:10px;font-weight:850;letter-spacing:.08em}
+.qq-focus-tag .live-dot{width:6px;height:6px}
+.qq-focus-details h3{font-size:clamp(23px,3vw,34px);line-height:1.25;margin:20px 0 10px;color:#f6fcff;font-weight:950}
+.qq-focus-details p{font-size:13px;color:#ccdee8;line-height:1.95;margin:0 0 22px}
+.qq-group-number{display:flex;align-items:center;gap:15px;padding:15px 17px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(202,233,245,.17);margin-bottom:18px}
+.qq-group-number span{font-size:11px;color:#a7c3d3}
+.qq-group-number strong{font-size:clamp(22px,3vw,31px);font-weight:900;letter-spacing:.05em;font-variant-numeric:tabular-nums;color:#a8f0f0}
+.qq-focus-details .button{border:0;cursor:pointer}
+.qq-copy-status{margin-top:14px;color:#b7cdd8;font-size:10px;line-height:1.85}
+.qq-qr-figure{justify-self:center;width:min(100%,430px);margin:0;padding:19px;border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.055));border:1px solid rgba(195,231,244,.34);box-shadow:0 24px 64px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.12);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);text-align:center}
+.qq-qr-figure img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:16px;background:#1c1c1c}
+.qq-qr-figure figcaption{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:15px;color:#e6f8fc;font-size:12px;font-weight:850}
+.qq-qr-dot{width:7px;height:7px;border-radius:50%;background:#8fe6cd;box-shadow:0 0 0 4px rgba(143,230,205,.12)}
+@media(max-width:860px){.qq-focus-content{grid-template-columns:minmax(0,1fr) minmax(250px,.8fr);gap:16px}.qq-focus-details{padding:21px}.qq-qr-figure{padding:14px}}
+@media(max-width:620px){.qq-focus-content{grid-template-columns:1fr;gap:15px}.qq-focus-details{padding:18px}.qq-focus-details h3{margin:13px 0 8px;font-size:23px}.qq-focus-details p{font-size:11px;margin-bottom:13px}.qq-group-number{padding:11px 13px;margin-bottom:12px}.qq-group-number strong{font-size:25px}.qq-focus-details .button{width:100%}.qq-copy-status{font-size:9px;margin-top:10px}.qq-qr-figure{width:min(100%,310px);padding:11px;border-radius:20px}.qq-qr-figure img{border-radius:12px}.qq-qr-figure figcaption{font-size:10px;margin-top:10px}}
+
+/* V0.5 platform marks: recognizable inline vectors, one consistent icon system. */
+.platform-icon,.community-icon{position:relative;overflow:hidden;isolation:isolate;border:1px solid rgba(255,255,255,.24);box-shadow:0 10px 22px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.22);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.platform-icon::before,.community-icon::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;background:linear-gradient(145deg,rgba(255,255,255,.22),transparent 46%);}
+.platform-icon svg,.community-icon svg{position:relative;z-index:1;display:block;width:32px;height:32px;flex:0 0 auto;overflow:visible;align-self:center;vertical-align:middle;filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.16))}.platform-icon,.community-icon{line-height:0}.platform-icon svg path,.platform-icon svg rect,.platform-icon svg circle,.platform-icon svg ellipse,.community-icon svg path,.community-icon svg rect,.community-icon svg circle,.community-icon svg ellipse{vector-effect:non-scaling-stroke}
+.platform-icon.dc{background:linear-gradient(145deg,#6574ff,#4f56de);color:#fff}
+.platform-icon.oopz{background:linear-gradient(145deg,#11141a,#050608);color:#fff}
+.platform-icon.blackbox{background:linear-gradient(145deg,#171a20,#050608);color:#fff}
+.platform-icon.kook{background:linear-gradient(145deg,#7776e0,#5655bd);color:#fff}
+.community-qq .community-icon{background:linear-gradient(145deg,#1fb8ff,#2184e7);color:#fff}
+.community-bili .community-icon{background:linear-gradient(145deg,#fb8bb5,#ef6b9b);color:#fff}
+.platform-card:hover .platform-icon,.community-card:hover .community-icon{transform:translateY(-2px) rotate(-2deg) scale(1.035);box-shadow:0 14px 28px rgba(0,0,0,.27),inset 0 1px rgba(255,255,255,.28);filter:saturate(1.1)}
+.focus-panel .platform-icon svg{width:36px;height:36px}
+.focus-panel .community-icon svg{width:42px;height:42px}
+@media(max-width:620px){.platform-icon svg{width:28px;height:28px}.community-icon svg{width:34px;height:34px}.focus-panel .platform-icon svg{width:29px;height:29px}.focus-panel .community-icon svg{width:32px;height:32px}}
+/* Icon alignment polish: optical sizes account for each brand's different SVG viewBox and silhouette. */
+.topnav a{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.topnav .nav-icon{display:block;vertical-align:0;flex:0 0 auto}
+.platform-icon.dc svg{width:27px;height:27px}
+.focus-panel .platform-icon.dc svg{width:30px;height:30px}
+@media(max-width:620px){.topnav a{gap:5px}.platform-icon.dc svg{width:25px;height:25px}.focus-panel .platform-icon.dc svg{width:27px;height:27px}}
+
+
+/* V0.7 destination hub redesign: consistent icon geometry, card grid, and clear action hierarchy. */
+.platform-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+.destination-card{display:grid;grid-template-rows:auto 1fr auto;align-items:stretch;gap:0;min-width:0;min-height:190px;padding:19px 19px 17px;border-radius:22px;background:linear-gradient(145deg,rgba(9,31,51,.82),rgba(20,47,67,.60));border:1px solid rgba(190,226,244,.29);box-shadow:0 16px 38px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.10);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;isolation:isolate}
+.destination-card::before{content:"";position:absolute;z-index:-1;right:-46px;top:-58px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(132,218,238,.16),transparent 69%);pointer-events:none}
+.destination-card:hover{transform:translateY(-4px);border-color:rgba(139,223,225,.65);background:linear-gradient(145deg,rgba(16,45,68,.91),rgba(24,58,80,.76));box-shadow:0 23px 48px rgba(0,0,0,.28),0 0 0 1px rgba(139,223,225,.06)}
+.destination-card:focus-visible,.community-card:focus-visible{outline:3px solid rgba(133,229,239,.78);outline-offset:4px}
+.destination-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.destination-index,.community-eyebrow{font-size:9px;line-height:1.2;letter-spacing:.15em;font-weight:900;color:#8faebf;white-space:nowrap}
+.platform-icon{width:58px;height:58px;display:grid;place-items:center;margin:0;border-radius:18px;flex:0 0 58px;font-size:0;border:1px solid rgba(255,255,255,.26);box-shadow:0 12px 25px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.26)}
+.platform-icon svg{display:block;width:31px;height:31px;max-width:100%;max-height:100%;flex:none;position:relative;z-index:1;overflow:visible}
+.platform-icon.dc{background:linear-gradient(145deg,#687aff,#4f56de);color:#fff}
+.platform-icon.oopz{background:linear-gradient(145deg,#202b35,#080f18);color:#e7fcff}
+.platform-icon.blackbox{background:linear-gradient(145deg,#202630,#070c13);color:#fff}
+.platform-icon.kook{background:linear-gradient(145deg,#6d72d7,#444db3);color:#fff}
+.platform-icon.kook svg{width:34px;height:34px}
+.platform-info{width:100%;min-width:0;flex:1;align-self:start;margin-top:17px}
+.platform-name{font-size:18px;font-weight:950;letter-spacing:-.025em;color:#f3faff;line-height:1.25}
+.platform-type{font-size:11px;color:#b4cbd9;line-height:1.55;margin-top:5px}
+.platform-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;padding-top:13px;border-top:1px solid rgba(198,226,241,.15)}
+.platform-status{font-size:10px;color:#b8f2dd;background:rgba(108,210,177,.12);border:1px solid rgba(139,220,190,.22);border-radius:99px;padding:5px 9px;line-height:1.2;font-weight:850;white-space:nowrap}
+.destination-arrow,.community-side-arrow{width:31px;height:31px;display:grid;place-items:center;border:1px solid rgba(167,226,238,.24);border-radius:50%;background:rgba(112,204,225,.11);color:#a9eff4;font-size:18px;line-height:1;flex:none;transition:transform .2s ease,background .2s ease}
+.destination-card:hover .destination-arrow,.community-card:hover .community-side-arrow{transform:translate(2px,-2px);background:rgba(112,204,225,.20)}
+.community-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+.community-card{appearance:none;-webkit-appearance:none;width:100%;min-width:0;min-height:164px;display:grid;grid-template-columns:68px minmax(0,1fr) 34px;align-items:center;gap:19px;margin:0;padding:22px 24px;border-radius:24px;text-align:left;font:inherit;color:#f2f9fc;border:1px solid rgba(198,228,245,.27);background:linear-gradient(135deg,rgba(12,36,58,.81),rgba(26,51,72,.60));box-shadow:0 18px 42px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease}
+.community-card::after{width:170px;height:170px;right:-72px;bottom:-116px;border-color:rgba(174,224,244,.10);box-shadow:0 0 0 22px rgba(184,231,248,.018);pointer-events:none}
+.community-card:hover{transform:translateY(-3px);border-color:rgba(139,223,225,.62);box-shadow:0 23px 48px rgba(0,0,0,.27);background:linear-gradient(135deg,rgba(15,45,68,.92),rgba(29,60,82,.75))}
+.community-qq,.community-bili{background:linear-gradient(135deg,rgba(13,42,64,.83),rgba(24,50,71,.62))}
+.community-icon{width:68px;height:68px;display:grid;place-items:center;margin:0;border-radius:21px;flex:none;border:1px solid rgba(255,255,255,.25);box-shadow:0 12px 24px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.25)}
+.community-icon svg{display:block;width:38px;height:38px;max-width:100%;max-height:100%;position:relative;z-index:1}
+.community-qq .community-icon{background:linear-gradient(145deg,#31c4ff,#147ce3);color:#fff}
+.community-bili .community-icon{background:linear-gradient(145deg,#ff9cc0,#e86da0);color:#fff}
+.community-text{display:flex;flex-direction:column;align-items:flex-start;gap:0;position:relative;z-index:1;min-width:0}
+.community-eyebrow{margin-bottom:9px}
+.community-title{font-size:19px;line-height:1.25;font-weight:950;color:#f4faff}
+.community-copy{font-size:11px;line-height:1.65;color:#bed1de;margin-top:5px}
+.community-bottom{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;color:#d0e8ef;font-size:10px;font-weight:850}
+.community-bottom .platform-status{font-size:9px}
+.community-side-arrow{width:34px;height:34px;font-size:18px;position:relative;z-index:1}
+/* Larger, uncluttered focus panels inherit the same icon grid rather than changing card geometry. */
+.focus-panel .platform-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.focus-panel .destination-card{min-height:235px;padding:23px 22px 19px}
+.focus-panel .platform-icon{width:64px;height:64px;flex-basis:64px;border-radius:20px}
+.focus-panel .platform-icon svg{width:34px;height:34px}
+.focus-panel .platform-info{margin-top:20px}
+.focus-panel .platform-name{font-size:21px}
+.focus-panel .platform-type{font-size:12px}
+.focus-panel .platform-footer{margin-top:20px}
+.focus-panel .community-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.focus-panel .community-card{min-height:190px;padding:27px;grid-template-columns:78px minmax(0,1fr) 36px;gap:21px}
+.focus-panel .community-icon{width:78px;height:78px;border-radius:24px}
+.focus-panel .community-icon svg{width:43px;height:43px}
+.focus-panel .community-title{font-size:22px}
+.focus-panel .community-copy{font-size:12px}
+@media(max-width:860px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-panel .platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-panel .destination-card{min-height:185px}.community-grid,.focus-panel .community-grid{grid-template-columns:1fr}.community-card{min-height:145px}}
+@media(max-width:620px){.platform-grid,.focus-panel .platform-grid{grid-template-columns:1fr;gap:11px}.destination-card,.focus-panel .destination-card{grid-template-columns:58px minmax(0,1fr) 30px;grid-template-rows:auto;align-items:center;gap:0;min-height:0;padding:14px;column-gap:13px}.destination-card-top{grid-column:1;grid-row:1 / span 2;display:block}.platform-icon,.focus-panel .platform-icon{width:54px;height:54px;flex-basis:54px;border-radius:16px}.destination-index{display:none}.platform-info,.focus-panel .platform-info{grid-column:2;grid-row:1;align-self:end;margin:0;width:auto}.platform-name,.focus-panel .platform-name{font-size:15px}.platform-type,.focus-panel .platform-type{margin-top:3px;font-size:10px}.platform-footer,.focus-panel .platform-footer{grid-column:2 / span 2;grid-row:2;margin-top:9px;padding-top:8px;min-width:0}.destination-arrow{grid-column:3;grid-row:1;justify-self:end;width:29px;height:29px}.platform-status{font-size:9px}.community-grid,.focus-panel .community-grid{grid-template-columns:1fr;gap:11px}.community-card,.focus-panel .community-card{grid-template-columns:56px minmax(0,1fr) 30px;gap:13px;padding:15px;min-height:125px;border-radius:19px}.community-icon,.focus-panel .community-icon{width:56px;height:56px;border-radius:16px}.community-icon svg,.focus-panel .community-icon svg{width:32px;height:32px}.community-eyebrow{font-size:8px;margin-bottom:6px}.community-title,.focus-panel .community-title{font-size:16px}.community-copy,.focus-panel .community-copy{font-size:10px}.community-bottom{margin-top:8px}.community-side-arrow,.focus-panel .community-side-arrow{width:29px;height:29px}.focus-panel .platform-card{min-height:0}}
+@media(prefers-reduced-motion:reduce){.destination-card,.community-card,.destination-arrow,.community-side-arrow{transition:none!important}}
+
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <a class="brand" href="#homePanel" data-focus-target="homePanel" aria-label="符冬便利店官网">
+    <span class="brand-mark" aria-hidden="true">FD</span>
+    <span><span class="brand-title" style="display:block">符冬便利店</span><span class="brand-sub" style="display:block">FUDONG · ONLINE STORE</span></span>
+  </a>
+  <nav class="topnav" aria-label="主导航">
+    <a href="#about" data-focus-target="about"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v16H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20M8 7h8M8 11h6"/></svg>关于我们</a>
+    <a href="#voice" data-focus-target="voice"><svg class="nav-icon nav-icon-voice" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="12" width="4" height="7" rx="2"/><rect x="17" y="12" width="4" height="7" rx="2"/><path d="M19 19a7 7 0 0 1-7 3h-2"/></svg>语音频道</a>
+    <a href="#community" data-focus-target="community"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20v-1.2A5.3 5.3 0 0 1 7.8 13h2.4a5.3 5.3 0 0 1 5.3 5.3V20z"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.5M18 13a5.4 5.4 0 0 1 3.5 5v2"/></svg>社群链接</a>
+    <a href="#announcements" data-focus-target="announcements"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m3 10 17-6v16L3 14z"/><path d="m6 15 2 6h4l-3-7M20 10h2v4h-2"/></svg>公告栏</a>
+  </nav>
+</header>
+<main id="home" class="wrap">
+  <section class="hero" id="homePanel" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="live-dot"></span> FUDONG CONVENIENCE STORE · ONLINE</div>
+      <h1 id="hero-title">路过的话，<br><em>进来坐坐。</em></h1>
+      <p class="hero-desc">这里是符冬便利店的线上门店。聊聊天、开开麦、分享最近遇到的有趣事。无论今天过得怎么样，都欢迎来这里歇一会儿。</p>
+      <div class="hero-actions"><a class="button button-light" href="#voice" data-focus-target="voice">找到语音频道 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#announcements" data-focus-target="announcements">看看店内公告 ↓</a></div>
+      <div class="hero-note">不赶时间，慢慢逛。愿这里总有一盏灯为你亮着。</div>
+    </div>
+    <aside class="clock-card" aria-label="门店时间">
+      <div class="clock-top"><span>STORE CLOCK / UTC+8</span><span class="clock-icon" aria-hidden="true">☾</span></div>
+      <div id="clockTime" class="clock-time">--:--:--</div>
+      <div id="clockDate" class="clock-date">正在读取北京时间…</div>
+      <div class="clock-divider"></div>
+      <div class="status-row"><span>线上门店状态</span><span class="status-pill"><span class="live-dot"></span> 随时欢迎你</span></div>
+    </aside>
+  </section>
+
+  <section id="about" class="section about-section" aria-labelledby="about-title">
+    <div class="section-heading">
+      <div><div class="kicker">ABOUT US · 频道简介</div><h2 id="about-title">“符冬便利店”频道简介</h2></div>
+      <p class="section-lead">正如其名“便利店”，我们希望这里能带来轻松、愉快，也随时欢迎你停下来歇一会儿。</p>
+    </div>
+    <div class="about-content">
+      <div class="about-copy">
+        <article class="about-block"><span class="about-index">01</span><div><h3>频道内容</h3><p>因为频道制作的视频种类很多，我们主要以一些轻松愉快的视频为主，包括游戏改编的微电影、LoFi 音乐视频以及高动态视频，也会在社群内发布一些便利的服务。</p></div></article>
+        <article class="about-block"><span class="about-index">02</span><div><h3>关于频道直播间</h3><p>直播间的常驻内容一般以 LoFi 音乐配合 R6 排位为主，当然也可以点播一些其他内容。</p></div></article>
+        <div class="about-signoff">什么都做，但方向都会往放松愉快那个方向。<strong>祝您晚安。</strong></div>
+        <aside class="about-tip"><strong>Tips · 开播提醒</strong><p>如果你希望在什么时间开播，可以在开播的时候留言，或者在社群里吱一声。一般可以临时添加，或者更新在下一周周表。</p></aside>
+      </div>
+      <figure class="about-visual"><img src="./assets/about-character.webp" alt="紫发兽耳店员在便利店柜台前休息"><figcaption><span class="live-dot"></span> GOOD THINGS. GOOD DAYS.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="voice" class="section" aria-labelledby="voice-title">
+    <div class="section-heading">
+      <div><div class="kicker">VOICE · 语音空间</div><h2 id="voice-title">来语音里碰个面</h2></div>
+      <p class="section-lead">不同的平台，同一份热闹。挑一个熟悉的入口，一起开麦、聊天或组队。</p>
+    </div>
+    <div class="platform-grid">
+      <a class="platform-card destination-card" href="https://discord.gg/xC4yqAu88t" target="_blank" rel="noopener noreferrer" aria-label="打开 Discord 语音邀请链接（新标签页）">
+        <div class="destination-card-top"><span class="platform-icon dc" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.08.08 0 0 0-.08.04c-.21.37-.45.86-.61 1.25a18.7 18.7 0 0 0-5.49 0c-.17-.39-.41-.88-.62-1.25a.08.08 0 0 0-.08-.04A19.7 19.7 0 0 0 3.66 4.37a.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06c2.05 1.51 4.04 2.42 5.99 3.03a.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-1.99a.08.08 0 0 0-.04-.11 12.3 12.3 0 0 1-1.87-.89.08.08 0 0 1-.01-.13c.13-.09.25-.19.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01c.13.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.64-1.87.89a.08.08 0 0 0-.04.11c.36.7.77 1.36 1.23 1.99a.08.08 0 0 0 .08.03c1.96-.61 3.95-1.52 6-3.03a.08.08 0 0 0 .03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.09-2.16-2.42s.96-2.42 2.16-2.42 2.18 1.1 2.16 2.42c0 1.33-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.16-1.09-2.16-2.42s.96-2.42 2.16-2.42 2.18 1.1 2.16 2.42c0 1.33-.95 2.42-2.16 2.42Z"/></svg></span><span class="destination-index">VOICE / 01</span></div>
+        <div class="platform-info"><div class="platform-name">Discord</div><div class="platform-type">语音 · 社群交流</div></div>
+        <div class="platform-footer"><span class="platform-status">进入语音空间</span><span class="destination-arrow" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="platform-card destination-card" href="https://oopz.cn/i/b5Vz7k" target="_blank" rel="noopener noreferrer" aria-label="打开 OOPZ 语音邀请链接（新标签页）">
+        <div class="destination-card-top"><span class="platform-icon oopz" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M15 19H49L24 42H48" fill="none" stroke="currentColor" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="52" cy="45" r="4.4" fill="#4cd4ff"/></svg></span><span class="destination-index">VOICE / 02</span></div>
+        <div class="platform-info"><div class="platform-name">OOPZ</div><div class="platform-type">语音 · 一起开黑</div></div>
+        <div class="platform-footer"><span class="platform-status">进入语音空间</span><span class="destination-arrow" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="platform-card destination-card" href="https://chat.xiaoheihe.cn/i93dvtd4" target="_blank" rel="noopener noreferrer" aria-label="打开黑盒语音邀请链接（新标签页）">
+        <div class="destination-card-top"><span class="platform-icon blackbox" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><linearGradient id="bbg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#42edba"/><stop offset=".48" stop-color="#d8ed67"/><stop offset="1" stop-color="#ffb13d"/></linearGradient><linearGradient id="bbg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#31e5b5"/><stop offset=".55" stop-color="#8cdeba"/><stop offset="1" stop-color="#a98cff"/></linearGradient></defs><path d="M12 15h40l-7.5 10H12z" fill="url(#bbg1)"/><path d="M12 28h28l-7.5 10H12z" fill="url(#bbg1)"/><path d="M49 21.5 57 27 36 51 25.5 36.5 32 28l4.2 6.4z" fill="url(#bbg2)"/></svg></span><span class="destination-index">VOICE / 03</span></div>
+        <div class="platform-info"><div class="platform-name">黑盒语音</div><div class="platform-type">语音 · 游戏与日常</div></div>
+        <div class="platform-footer"><span class="platform-status">进入语音空间</span><span class="destination-arrow" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="platform-card destination-card" href="https://kook.vip/oYlbRg" target="_blank" rel="noopener noreferrer" aria-label="打开 KOOK 语音邀请链接（新标签页）">
+        <div class="destination-card-top"><span class="platform-icon kook" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 27c0-10 8-17 19-17h7c11 0 19 7 19 17v10c0 11-6 18-14 18-5 0-8-3-11-7-3 4-6 7-11 7-8 0-14-7-14-18V27z" fill="currentColor"/><path d="M18 27h8M18 33h8M38 27h8M38 33h8" stroke="#5d5fd0" stroke-width="4.5" stroke-linecap="round"/><path d="M27 40q5 7 10 0" fill="none" stroke="#5d5fd0" stroke-width="4" stroke-linecap="round"/></svg></span><span class="destination-index">VOICE / 04</span></div>
+        <div class="platform-info"><div class="platform-name">KOOK</div><div class="platform-type">语音 · 兴趣小聚</div></div>
+        <div class="platform-footer"><span class="platform-status">进入语音空间</span><span class="destination-arrow" aria-hidden="true">↗</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="community" class="section" aria-labelledby="community-title">
+    <div class="section-heading"><div><div class="kicker">COMMUNITY · 社群入口</div><h2 id="community-title">在别的地方，也能找到我们</h2></div><p class="section-lead">想看动态、找公告，或和大家继续聊下去？从这里找到符冬便利店的社群入口。</p></div>
+    <div class="community-grid">
+      <button type="button" class="community-card community-qq qq-open-button" data-focus-target="qqFocusPanel" aria-label="打开 QQ 社群二维码聚焦面板">
+        <span class="community-icon qq-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 6c-11 0-18 10-18 23 0 4-5 10-5 16 0 5 4 7 8 4 2 8 8 11 15 11s13-3 15-11c4 3 8 1 8-4 0-6-5-12-5-16C50 16 43 6 32 6z" fill="#11151d"/><path d="M18 31c1-7 6-12 14-12s13 5 14 12v16c-4 6-8 9-14 9s-10-3-14-9z" fill="#f7fbff"/><path d="M19 23c1-7 6-11 13-11s12 4 13 11c-8-2-18-2-26 0z" fill="#161a22"/><ellipse cx="25" cy="24" rx="3" ry="4" fill="#fff"/><ellipse cx="39" cy="24" rx="3" ry="4" fill="#fff"/><circle cx="26" cy="25" r="1.7" fill="#12151b"/><circle cx="38" cy="25" r="1.7" fill="#12151b"/><path d="M25 29l7-2 7 2-7 5z" fill="#ffc83d"/><path d="M15 33c11 6 23 6 34 0l-2 9c-9 6-21 6-30 0z" fill="#f04450"/><path d="M19 40l-1 10 8-3" fill="#e83446"/></svg></span>
+        <span class="community-text"><span class="community-eyebrow">COMMUNITY / 01</span><span class="community-title">QQ 社群</span><span class="community-copy">日常交流、通知与社群互动</span><span class="community-bottom"><span class="platform-status">查看入群二维码</span></span></span>
+        <span class="community-side-arrow" aria-hidden="true">⌕</span>
+      </button>
+      <a class="community-card community-bili" href="https://space.bilibili.com/481636456" target="_blank" rel="noopener noreferrer" aria-label="打开符冬便利店哔哩哔哩主页（新标签页）">
+        <span class="community-icon bili-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M22 13 16 6M42 13l6-7" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="8" y="15" width="48" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="4"/><path d="M19 28l7 2M45 28l-7 2M22 39q10 10 20 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="community-text"><span class="community-eyebrow">COMMUNITY / 02</span><span class="community-title">哔哩哔哩</span><span class="community-copy">视频动态、内容更新与更多分享</span><span class="community-bottom"><span class="platform-status">访问个人主页</span></span></span>
+        <span class="community-side-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="qqFocusPanel" class="section qq-focus-section" aria-labelledby="qq-focus-title">
+    <div class="section-heading">
+      <div><div class="kicker">QQ COMMUNITY · 社群二维码</div><h2 id="qq-focus-title">加入符冬便利店 FDCS</h2></div>
+      <p class="section-lead">用 QQ 扫描二维码加入群聊。二维码会在聚焦面板中放大显示，方便查看与扫描。</p>
+    </div>
+    <div class="qq-focus-content">
+      <div class="qq-focus-details">
+        <span class="qq-focus-tag"><span class="live-dot"></span> QQ 社群入口</span>
+        <h3>符冬便利店 FDCS</h3>
+        <p>欢迎来社群坐坐，关注便利店动态，和大家交流聊天。</p>
+        <div class="qq-group-number"><span>群号</span><strong id="qqGroupNumber">650848558</strong></div>
+        <button type="button" class="button button-light" id="copyQQNumber">复制群号</button>
+        <div class="qq-copy-status" id="qqCopyStatus" aria-live="polite">如果在手机上浏览，可以长按二维码保存后再用 QQ 扫描。</div>
+      </div>
+      <figure class="qq-qr-figure">
+        <img src="./assets/qq-group-qrcode.png" alt="符冬便利店 FDCS QQ 社群二维码，群号 650848558" width="820" height="820">
+        <figcaption><span class="qq-qr-dot"></span>扫一扫二维码，加入群聊</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="announcements" class="section" aria-labelledby="announcements-title">
+    <div class="section-heading"><div><div class="kicker">NOTICE BOARD · 店内公告</div><h2 id="announcements-title">柜台旁边的公告板</h2></div><p class="section-lead">店内最新动态会在这里发布。</p></div>
+    <div class="announcement-empty" role="status" aria-live="polite">
+      <div class="announcement-empty-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M9 27h12l30-13v36L21 37H9z"/><path d="m17 38 5 15h10l-8-17M51 25h7v14h-7"/><path d="M14 19 9 13M14 45 9 51"/></svg></div>
+      <h3>暂无最新公告</h3>
+      <p>店里暂时没有新消息，欢迎稍后再来看看。</p>
+    </div>
+  </section>
+</main>
+<div class="focus-backdrop" id="focusBackdrop" hidden aria-hidden="true"></div>
+<button class="focus-close" id="focusClose" type="button" hidden aria-label="退出聚焦视图">× <span>返回全览</span></button>
+
+<footer class="wrap footer"><div class="footer-inner"><div><div class="footer-brand">FD · 符冬便利店</div><div class="footer-copy">把日常放慢一点，让相遇自然发生。</div></div><nav class="footer-links" aria-label="页脚导航"><a href="#voice" data-focus-target="voice">语音频道</a><a href="#community" data-focus-target="community">社群入口</a><a href="#announcements" data-focus-target="announcements">店内公告</a><a href="#about" data-focus-target="about">关于我们</a></nav></div><div class="footnote">© <span id="year"></span> 符冬便利店 · 页面时间为北京时间（UTC+8） · 欢迎来坐坐</div></footer>
+<script>
+(()=>{
+  'use strict';
+  const timeEl=document.getElementById('clockTime');
+  const dateEl=document.getElementById('clockDate');
+  const timeFmt=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
+  const dateFmt=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric',weekday:'long'});
+  function tick(){const now=new Date();timeEl.textContent=timeFmt.format(now);dateEl.textContent=dateFmt.format(now);document.getElementById('year').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric'}).format(now)}
+  tick();setInterval(tick,1000);
+
+  const backdrop=document.getElementById('focusBackdrop');
+  const closeButton=document.getElementById('focusClose');
+  const focusLinks=[...document.querySelectorAll('[data-focus-target]')];
+  let activePanel=null;
+  function clearActiveLinks(){
+    focusLinks.forEach(link=>{
+      link.classList.remove('is-active');
+      link.removeAttribute('aria-current');
+      link.setAttribute('aria-expanded','false');
+    });
+  }
+  function closeFocus(){
+    if(activePanel) activePanel.classList.remove('focus-panel');
+    activePanel=null;
+    document.body.classList.remove('focus-mode');
+    backdrop.hidden=true;
+    closeButton.hidden=true;
+    clearActiveLinks();
+  }
+  function focusPanel(id){
+    const panel=document.getElementById(id);
+    if(!panel || !(panel.matches('.hero') || panel.matches('.section'))) return;
+    if(activePanel) activePanel.classList.remove('focus-panel');
+    activePanel=panel;
+    activePanel.classList.add('focus-panel');
+    document.body.classList.add('focus-mode');
+    backdrop.hidden=false;
+    closeButton.hidden=false;
+    clearActiveLinks();
+    focusLinks.filter(link=>link.dataset.focusTarget===id).forEach(link=>{
+      link.classList.add('is-active');
+      link.setAttribute('aria-current','page');
+      link.setAttribute('aria-expanded','true');
+    });
+    activePanel.scrollTop=0;
+  }
+  focusLinks.forEach(link=>link.addEventListener('click',event=>{
+    event.preventDefault();
+    focusPanel(link.dataset.focusTarget);
+  }));
+  const copyQQButton=document.getElementById('copyQQNumber');
+  const copyQQStatus=document.getElementById('qqCopyStatus');
+  copyQQButton?.addEventListener('click',async()=>{
+    const value='650848558';
+    try{
+      if(navigator.clipboard && window.isSecureContext){
+        await navigator.clipboard.writeText(value);
+      }else{
+        const temp=document.createElement('textarea');
+        temp.value=value;temp.setAttribute('readonly','');
+        temp.style.position='fixed';temp.style.opacity='0';temp.style.left='-9999px';
+        document.body.appendChild(temp);temp.select();
+        const copied=document.execCommand('copy');temp.remove();
+        if(!copied)throw new Error('copy unavailable');
+      }
+      copyQQStatus.textContent='群号已复制：650848558';
+      copyQQButton.textContent='已复制群号 ✓';
+    }catch{
+      copyQQStatus.textContent='群号：650848558（可以手动选中复制）';
+    }
+  });
+  backdrop.addEventListener('click',closeFocus);
+  closeButton.addEventListener('click',closeFocus);
+  document.addEventListener('keydown',event=>{if(event.key==='Escape' && activePanel) closeFocus()});
+})();
+</script>
+</body>
+</html>
